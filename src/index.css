@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Custom Smooth Transitions & Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #07172E;
+}
+::-webkit-scrollbar-thumb {
+  background: #234E9A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E52B32;
+}
+
+/* Glassmorphism subtle effects */
+.ultra-glass {
+  background: rgba(16, 42, 80, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ultra-glass-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(7, 23, 46, 0.08);
+}
+
+.ultra-glow-red {
+  box-shadow: 0 0 35px -5px rgba(229, 43, 50, 0.3);
+}
+
+.ultra-glow-gold {
+  box-shadow: 0 0 35px -5px rgba(245, 181, 27, 0.25);
+}
+
+.ultra-glow-blue {
+  box-shadow: 0 0 50px -10px rgba(35, 78, 154, 0.4);
+}

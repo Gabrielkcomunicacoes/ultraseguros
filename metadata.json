@@ -1,0 +1,6 @@
+{
+  "name": "Ultra Seguros - Plano de Saúde Empresarial",
+  "description": "Landing page premium de alta conversão para gestão, cotação e análise de plano de saúde empresarial da Ultra Seguros Corretora.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
