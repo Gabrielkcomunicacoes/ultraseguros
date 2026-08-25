@@ -28,14 +28,15 @@ export const RHPainSection: React.FC<RHPainSectionProps> = ({ onOpenAnalysis }) 
           {/* Left Column - Professional RH Image & Overlays */}
           <div className="lg:col-span-5 relative order-2 lg:order-1">
             <div className="relative mx-auto max-w-md lg:max-w-none">
-              <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-2xl bg-[#07172E]">
+              <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-2xl bg-[#07172E] group relative">
                 <img
-                  src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1000&auto=format&fit=crop"
-                  alt="Profissional de Recursos Humanos e Gestão de Pessoas"
-                  className="w-full h-[380px] sm:h-[450px] object-cover object-center filter contrast-[1.02]"
+                  src="/assets/equipe-trabalhando.webp"
+                  alt="Equipe de atendimento e gestão da Ultra Seguros Corretora"
+                  className="w-full h-[380px] sm:h-[460px] object-cover object-left filter contrast-[1.02] transition-transform duration-700 group-hover:scale-105 origin-left"
                   loading="lazy"
                   referrerPolicy="no-referrer"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#07172E]/40 via-transparent to-transparent opacity-60 pointer-events-none"></div>
               </div>
 
               {/* Floating Solution Overlay Card */}

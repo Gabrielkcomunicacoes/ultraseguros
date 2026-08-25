@@ -104,15 +104,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAnalysis }) => {
             <div className="relative mx-auto max-w-md lg:max-w-none">
 
               {/* Main Photo Card */}
-              <div className="relative rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-[#102A50]">
+              <div className="relative rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-[#102A50] group">
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
-                  alt="Diretora executiva e gestor analisando dados da empresa"
-                  className="w-full h-[380px] sm:h-[460px] object-cover object-top filter brightness-[0.92] contrast-[1.05]"
+                  src="/assets/hero.webp"
+                  alt="Especialistas da Ultra Seguros Corretora analisando dados empresariais"
+                  className="w-full h-[400px] sm:h-[480px] object-cover object-right filter brightness-[0.96] contrast-[1.04] transition-transform duration-700 group-hover:scale-105 origin-right"
                   loading="eager"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#07172E] via-transparent to-transparent opacity-80"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#07172E]/50 via-transparent to-transparent pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#07172E] via-transparent to-transparent opacity-70 pointer-events-none"></div>
 
                 {/* Top Badge: Ultra Corretora Support */}
                 <div className="absolute top-4 left-4 right-4 flex justify-between items-center z-10">
@@ -152,8 +153,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAnalysis }) => {
                 </div>
               </div>
 
-              {/* Floating UI Card 3 - Middle Right Badge */}
-              <div className="absolute bottom-16 -right-2 sm:-right-4 ultra-glass px-3.5 py-2 rounded-lg border border-white/10 shadow-lg z-20 hidden sm:flex items-center gap-2 text-xs font-semibold text-slate-200">
+              {/* Floating UI Card 3 - Bottom Right Badge */}
+              <div className="absolute bottom-4 -right-2 sm:-right-4 ultra-glass px-3.5 py-2 rounded-lg border border-white/10 shadow-lg z-20 hidden sm:flex items-center gap-2 text-xs font-semibold text-slate-200">
                 <FileCheck className="w-4 h-4 text-[#F5B51B]" />
                 <span>Sem custo de consultoria</span>
               </div>

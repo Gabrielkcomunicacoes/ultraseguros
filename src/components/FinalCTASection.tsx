@@ -63,11 +63,11 @@ export const FinalCTASection: React.FC<FinalCTASectionProps> = ({ onOpenAnalysis
 
             {/* Right Image */}
             <div className="lg:col-span-5 relative hidden lg:block">
-              <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
                 <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop"
-                  alt="Equipe executiva alinhada com estratégia da empresa"
-                  className="w-full h-[320px] object-cover object-center filter brightness-95"
+                  src="/assets/equipe-trabalhando.webp"
+                  alt="Equipe Ultra Seguros trabalhando alinhada com as necessidades da sua empresa"
+                  className="w-full h-[320px] object-cover object-center filter brightness-95 transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                   referrerPolicy="no-referrer"
                 />
