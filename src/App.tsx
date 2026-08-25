@@ -12,6 +12,8 @@ import { ProcessTimelineSection } from './components/ProcessTimelineSection';
 import { RHPainSection } from './components/RHPainSection';
 import { CostAnalysisSection } from './components/CostAnalysisSection';
 import { HowItWorksSection } from './components/HowItWorksSection';
+import { InsurersSection } from './components/InsurersSection';
+import { CoverageCategoriesSection } from './components/CoverageCategoriesSection';
 import { MainLeadForm } from './components/MainLeadForm';
 import { AuthoritySection } from './components/AuthoritySection';
 import { FAQSection } from './components/FAQSection';
@@ -72,6 +74,12 @@ export default function App() {
 
         {/* 08. Como Funciona */}
         <HowItWorksSection onOpenAnalysis={scrollToForm} />
+
+        {/* 08.1 Coberturas por Ramo */}
+        <CoverageCategoriesSection onOpenAnalysis={scrollToForm} />
+
+        {/* 08.2 Principais Seguradoras */}
+        <InsurersSection onOpenAnalysis={scrollToForm} />
         <WaveHowToForm />
 
         {/* 09. Formulário Principal */}

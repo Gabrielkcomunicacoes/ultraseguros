@@ -57,10 +57,22 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAnalysis }) => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           <button
+            onClick={() => scrollToSection('coberturas')}
+            className="text-sm font-medium text-slate-300 hover:text-white transition-colors cursor-pointer"
+          >
+            Coberturas
+          </button>
+          <button
             onClick={() => scrollToSection('como-funciona')}
             className="text-sm font-medium text-slate-300 hover:text-white transition-colors cursor-pointer"
           >
             Como funciona
+          </button>
+          <button
+            onClick={() => scrollToSection('seguradoras')}
+            className="text-sm font-medium text-slate-300 hover:text-white transition-colors cursor-pointer"
+          >
+            Seguradoras
           </button>
           <button
             onClick={() => scrollToSection('para-sua-empresa')}
@@ -130,10 +142,22 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAnalysis }) => {
         <div className="md:hidden bg-[#07172E] border-b border-white/10 px-6 py-6 space-y-4 shadow-2xl animate-fadeIn">
           <div className="flex flex-col space-y-3">
             <button
+              onClick={() => scrollToSection('coberturas')}
+              className="text-left py-2 text-base font-medium text-slate-200 hover:text-white border-b border-white/5"
+            >
+              Coberturas
+            </button>
+            <button
               onClick={() => scrollToSection('como-funciona')}
               className="text-left py-2 text-base font-medium text-slate-200 hover:text-white border-b border-white/5"
             >
               Como funciona
+            </button>
+            <button
+              onClick={() => scrollToSection('seguradoras')}
+              className="text-left py-2 text-base font-medium text-slate-200 hover:text-white border-b border-white/5"
+            >
+              Seguradoras
             </button>
             <button
               onClick={() => scrollToSection('para-sua-empresa')}
