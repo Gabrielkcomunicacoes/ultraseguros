@@ -2,7 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { trackEvent, getUTMParameters, buildWhatsAppLink, LeadData } from '../utils/analytics';
 import { ArrowRight, ArrowLeft, Check, Lock, Building, Users, Calendar, HelpCircle, Phone, Mail, User, ShieldCheck, MessageSquare, Sparkles } from 'lucide-react';
 
-export const MainLeadForm: React.FC = () => {
+interface MainLeadFormProps {
+  onNavigateFormulario?: () => void;
+}
+
+export const MainLeadForm: React.FC<MainLeadFormProps> = ({ onNavigateFormulario }) => {
   const [step, setStep] = useState<1 | 2 | 3 | 4>(1); // 4 is Success state
 
   // Form State

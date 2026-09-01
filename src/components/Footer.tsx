@@ -4,7 +4,11 @@ import { LegalModals } from './LegalModals';
 import { trackEvent, buildWhatsAppLink } from '../utils/analytics';
 import { MapPin, Phone, MessageSquare, Mail, Clock, ShieldCheck } from 'lucide-react';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onNavigateFormulario?: () => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onNavigateFormulario }) => {
   const [modalType, setModalType] = useState<'privacy' | 'terms' | null>(null);
 
   return (
@@ -86,7 +90,15 @@ export const Footer: React.FC = () => {
             © {new Date().getFullYear()} Ultra Seguros Corretora. Todos os direitos reservados.
           </div>
 
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+            {onNavigateFormulario && (
+              <button
+                onClick={onNavigateFormulario}
+                className="hover:text-[#F5B51B] text-slate-400 font-medium cursor-pointer"
+              >
+                Formulário de Cotação
+              </button>
+            )}
             <button
               onClick={() => setModalType('privacy')}
               className="hover:text-slate-300 underline cursor-pointer"

@@ -5,9 +5,10 @@ import { Phone, MessageSquare, Menu, X, ArrowRight } from 'lucide-react';
 
 interface HeaderProps {
   onOpenAnalysis: () => void;
+  onNavigateFormulario?: () => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ onOpenAnalysis }) => {
+export const Header: React.FC<HeaderProps> = ({ onOpenAnalysis, onNavigateFormulario }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
