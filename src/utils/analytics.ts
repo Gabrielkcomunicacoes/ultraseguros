@@ -54,10 +54,12 @@ export function trackEvent(eventName: string, payload?: Record<string, any>) {
     // 3. Meta Pixel (fbq) if present
     if (typeof (window as any).fbq === 'function') {
       try {
-        if (eventName === 'form_submit') {
+        if (eventName === 'form_submit' || eventName === 'quote_form_submit') {
           (window as any).fbq('track', 'Lead', payload);
-        } else if (eventName === 'start_form') {
+        } else if (eventName === 'start_form' || eventName === 'view_quote_form_page') {
           (window as any).fbq('track', 'InitiateCheckout', payload);
+        } else if (eventName.includes('whatsapp') || eventName === 'contact_click') {
+          (window as any).fbq('track', 'Contact', payload);
         } else {
           (window as any).fbq('trackCustom', eventName, payload);
         }
