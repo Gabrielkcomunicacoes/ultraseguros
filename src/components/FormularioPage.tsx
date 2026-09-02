@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { trackEvent, getUTMParameters, buildWhatsAppLink } from '../utils/analytics';
+import { sendLeadToSheetDB } from '../utils/sheetdb';
 import { Logo } from './Logo';
 import {
   ShieldCheck,
@@ -262,11 +263,16 @@ export const FormularioPage: React.FC<FormularioPageProps> = ({ onNavigateHome }
 
     trackEvent('quote_form_submit', payload);
 
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSuccess(true);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 800);
+    // Enviar para a planilha Google via SheetDB
+    try {
+      await sendLeadToSheetDB(payload);
+    } catch (sheetErr) {
+      console.warn('Erro ao salvar no SheetDB:', sheetErr);
+    }
+
+    setIsSubmitting(false);
+    setIsSuccess(true);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const getWhatsAppLeadMessage = () => {

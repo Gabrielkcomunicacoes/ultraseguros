@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { trackEvent, getUTMParameters, buildWhatsAppLink, LeadData } from '../utils/analytics';
+import { sendLeadToSheetDB } from '../utils/sheetdb';
 import { ArrowRight, ArrowLeft, Check, Lock, Building, Users, Calendar, HelpCircle, Phone, Mail, User, ShieldCheck, MessageSquare, Sparkles } from 'lucide-react';
 
 interface MainLeadFormProps {
@@ -134,11 +135,18 @@ export const MainLeadForm: React.FC<MainLeadFormProps> = ({ onNavigateFormulario
     // Dispatch Events
     trackEvent('form_submit', fullPayload);
 
-    // Simulate API submission delay
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setStep(4); // Show Success State
-    }, 700);
+    // Enviar para planilha via SheetDB
+    try {
+      await sendLeadToSheetDB({
+        ...fullPayload,
+        sourceForm: 'Formulário Página Principal (#formulario)',
+      });
+    } catch (sheetErr) {
+      console.warn('Erro ao salvar no SheetDB:', sheetErr);
+    }
+
+    setIsSubmitting(false);
+    setStep(4); // Show Success State
   };
 
   return (
