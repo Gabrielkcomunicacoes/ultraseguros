@@ -390,7 +390,7 @@ export const FormularioPage: React.FC<FormularioPageProps> = ({ onNavigateHome }
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4">
                 <a
-                  href={`https://wa.me/5532984324095?text=${encodeURIComponent(getWhatsAppLeadMessage())}`}
+                  href={buildWhatsAppLink(getWhatsAppLeadMessage())}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm text-white bg-emerald-600 hover:bg-emerald-500 shadow-lg shadow-emerald-950/20 transition-all cursor-pointer"

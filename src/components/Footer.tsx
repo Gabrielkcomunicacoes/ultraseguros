@@ -65,13 +65,16 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateFormulario }) => {
               className="flex items-center gap-2.5 text-slate-200 hover:text-emerald-400 transition-colors"
             >
               <MessageSquare className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>WhatsApp: (32) 98432-4095</span>
+              <span>WhatsApp: (32) 98865-0027</span>
             </a>
 
-            <div className="flex items-center gap-2.5 text-slate-300">
+            <a
+              href="tel:+5532988650027"
+              className="flex items-center gap-2.5 text-slate-300 hover:text-white transition-colors"
+            >
               <Phone className="w-4 h-4 text-[#234E9A] shrink-0" />
-              <span>Telefone: (32) 3025-6303</span>
-            </div>
+              <span>Telefone: (32) 98865-0027</span>
+            </a>
 
             <a
               href="mailto:cotacao@ultraseguroscorretora.com.br"

@@ -105,7 +105,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAnalysis, onNavigateFormul
             className="flex items-center gap-2 text-xs font-semibold text-slate-300 hover:text-emerald-400 transition-colors bg-white/5 hover:bg-white/10 px-3 py-2 rounded-lg border border-white/10"
           >
             <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />
-            <span>(32) 98432-4095</span>
+            <span>(32) 98865-0027</span>
           </a>
 
           <button
@@ -189,7 +189,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAnalysis, onNavigateFormul
               className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 font-medium text-sm"
             >
               <MessageSquare className="w-4 h-4 text-emerald-400" />
-              <span>WhatsApp: (32) 98432-4095</span>
+              <span>WhatsApp: (32) 98865-0027</span>
             </a>
 
             <button

@@ -72,7 +72,7 @@ export function trackEvent(eventName: string, payload?: Record<string, any>) {
 
 // Format WhatsApp Phone link with optional pre-filled message
 export function buildWhatsAppLink(message?: string): string {
-  const phone = '5532984324095';
+  const phone = '5532988650027';
   const defaultMsg = message || 'Olá, gostaria de solicitar uma análise de plano de saúde empresarial com a Ultra Seguros.';
   return `https://wa.me/${phone}?text=${encodeURIComponent(defaultMsg)}`;
 }
